@@ -157,19 +157,13 @@
   .hero-photo .photo-placeholder{ aspect-ratio: 3/4; }
 
   .photo-real{
-    width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
-    border-radius: 200px 200px 24px 24px;
+    width: 100%; aspect-ratio: 1 / 1.05; object-fit: cover;
+    border-radius: var(--radius-l);
     box-shadow: var(--shadow-hover);
-    border: 3px solid var(--gold);
     position: relative; z-index: 1;
   }
   .hero-photo{ position: relative; }
-  .hero-photo::before{
-    content: ""; position: absolute; inset: -40px -28px;
-    background: radial-gradient(ellipse at 50% 38%, rgba(201,168,106,0.22), transparent 68%);
-    filter: blur(30px); z-index: 0;
-  }
-  .hero-photo .photo-real{ aspect-ratio: 3/4; max-width: 520px; margin: 0 auto; }
+  .hero-photo .photo-real{ max-width: 520px; margin: 0 auto; }
 
   /* Pain section */
   .pain{ background: var(--ivory); }
@@ -520,7 +514,7 @@
 
     <div class="methods-grid">
       <div class="method-card reveal">
-        <img class="method-cover" src="assets/brand/Coaching.png" alt="Coaching 1:1">
+        <img class="method-cover" src="assets/brand/Coaching.png" alt="Coaching 1:1" style="aspect-ratio: 941 / 1672;">
         <h3>Coaching 1:1</h3>
         <p>Đồng hành trực tuyến qua Zoom, 60&ndash;90 phút mỗi buổi, cá nhân hoá theo đúng tình trạng và mục tiêu của bạn.</p>
       </div>
@@ -590,7 +584,7 @@
         <p class="story-text">Ở tuổi 60, Covid đã cướp đi người bạn đời thân yêu của tôi. Tôi một mình chăm lo gia đình, mẹ già và các con nơi xứ người, tại Ba Lan — những điều trước đây luôn có người đồng hành. Tôi đã trưởng thành và tái sinh sau khoảng thời gian ấy, học cách tin vào chính mình một lần nữa.</p>
       </div>
 
-      <p class="pull-quote">Không có tuổi nào là muộn để bắt đầu lại.</p>
+      <p class="pull-quote">&ldquo;Có những điều trong cuộc sống không thể thay đổi. Nhưng chúng ta luôn có thể chọn cách bước tiếp với một trái tim bình an hơn.&rdquo;</p>
 
       <div class="story-block">
         <span class="story-num">03</span>
@@ -604,7 +598,7 @@
         <p class="story-text">Tôi không đưa ra câu trả lời có sẵn. Công việc của tôi là đồng hành để bạn tự tìm thấy câu trả lời của riêng mình.</p>
       </div>
 
-      <p class="pull-quote pull-quote-lg">&ldquo;Tôi không tin ai cần được sửa chữa. Tôi tin mỗi người đều có câu trả lời của riêng mình.&rdquo;</p>
+      <p class="pull-quote pull-quote-lg">&ldquo;Điều tôi trân trọng nhất không phải là đưa ra lời khuyên, mà là cùng bạn tìm lại câu trả lời vốn đã có sẵn bên trong chính mình.&rdquo;</p>
 
       <div class="authority">
         <h4 class="authority-title">Bằng chứng &amp; Chứng nhận</h4>
