@@ -257,16 +257,50 @@
   .about-grid{ display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: start; }
   @media (max-width: 900px){ .about-grid{ grid-template-columns: 1fr; gap: 40px; } }
   .about h2{ font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 6px; }
-  .about-role{ color: var(--emerald); font-weight: 600; font-size: 15px; margin-bottom: 24px; }
-  .about-bio p{ margin-bottom: 18px; color: var(--text-dark); font-size: 16.5px; }
-  .about-bio p:last-child{ margin-bottom: 0; }
+  .about-role{ color: var(--emerald); font-weight: 600; font-size: 15px; margin-bottom: 40px; }
 
-  .credentials{ margin-top: 36px; }
-  .credentials h4{ font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--copper); margin-bottom: 18px; }
-  .credentials-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
-  @media (max-width: 560px){ .credentials-grid{ grid-template-columns: 1fr; } }
-  .credential-item{ display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: var(--text-muted); }
-  .credential-item .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-top: 8px; flex-shrink: 0; }
+  .about-photo{ position: sticky; top: 110px; }
+  @media (max-width: 900px){ .about-photo{ position: static; } }
+
+  .story-block{ margin-bottom: 32px; }
+  .story-block-last{ margin-bottom: 0; }
+  .story-num{
+    display: block; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.14em; color: var(--gold); margin-bottom: 8px;
+  }
+  .story-title{ font-size: 19px; margin-bottom: 10px; color: var(--text-dark); }
+  .story-text{ font-size: 15.5px; color: var(--text-muted); }
+
+  .pull-quote{
+    font-family: 'Playfair Display', serif; font-style: italic; color: var(--emerald-dark);
+    font-size: 20px; line-height: 1.5; margin: 40px 0; padding-left: 22px;
+    border-left: 3px solid var(--gold);
+  }
+  .pull-quote-lg{ font-size: 26px; margin: 44px 0; }
+
+  .authority{ margin-top: 48px; padding-top: 44px; border-top: 1px solid var(--border-soft); }
+  .authority-title{ font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--copper); margin-bottom: 26px; }
+  .authority-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 560px){ .authority-grid{ grid-template-columns: 1fr; } }
+  .authority-group{
+    background: var(--cream); border: 1px solid var(--border-soft); border-radius: var(--radius-m);
+    padding: 22px 24px;
+  }
+  .authority-icon{
+    width: 36px; height: 36px; border-radius: 50%; background: var(--ivory); border: 1px solid var(--border-soft);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  }
+  .authority-group h5{ font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
+  .authority-group li{
+    font-size: 13.5px; color: var(--text-muted); margin-bottom: 6px; padding-left: 14px; position: relative;
+  }
+  .authority-group li:last-child{ margin-bottom: 0; }
+  .authority-group li::before{ content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+  .about-cta{
+    margin-top: 52px; padding: 34px 36px; background: var(--emerald-tint); border-radius: var(--radius-l);
+  }
+  .about-cta h4{ font-size: 20px; font-weight: 600; color: var(--emerald-dark); margin-bottom: 20px; }
 
   /* Testimonials */
   .feedback{ background: var(--cream); }
@@ -536,35 +570,84 @@
 <!-- 5. VỀ COACH -->
 <section class="about" id="vecoach">
   <div class="container about-grid">
-    <div class="reveal">
+    <div class="reveal about-photo">
       <img class="photo-real" src="assets/brand/Profile.png" alt="Chân dung Coach Mai Anh Trương">
     </div>
     <div class="reveal">
       <span class="eyebrow">Về Coach</span>
       <h2>Mai Anh Trương</h2>
       <p class="about-role">Life Coach · NLP, Time Line Therapy™, Hypnosis & Ho'oponopono Practitioner</p>
-      <div class="about-bio">
-        <p>Tôi từng là một dược sĩ, sau đó trải qua nhiều biến cố của cuộc sống và nhận ra rằng những tổn thương cảm xúc mới là điều khiến nhiều người phụ nữ mất đi hạnh phúc và chính mình. Hành trình học tập về NLP, Time Line Therapy™, Hypnosis, Ho'oponopono và Life Coaching đã giúp tôi chữa lành bản thân trước khi đồng hành cùng nhiều phụ nữ trưởng thành tìm lại sự bình an, giá trị và hướng đi phù hợp cho cuộc đời mình.</p>
-        <p>Tuổi 60, Covid đến đã cướp đi người bạn đời thân yêu của tôi, tôi đã phải trải qua thời gian tự mình chăm lo gia đình, mẹ già và con cháu nơi xứ người, tại Ba Lan — mọi việc mà trước đây luôn có người bạn đời cùng lo toan. Tôi đã trưởng thành, tái sinh sau thời gian này, tự tin vào bản thân mình. Tôi học tập phát triển bản thân, chia sẻ và truyền cảm hứng từ những câu chuyện hàng ngày của mình, và nghĩ rằng không có tuổi nào bắt đầu là muộn. Tôi đã học tập miệt mài ở tuổi trên 60 để trở thành một chuyên gia Life Coach, với niềm tin rằng mình sẽ giúp được nhiều phụ nữ giống như mình vượt qua nghịch cảnh, tìm lại niềm vui và ý nghĩa cho cuộc sống.</p>
+
+      <div class="story-block">
+        <span class="story-num">01</span>
+        <h3 class="story-title">Hành trình — Tôi là ai?</h3>
+        <p class="story-text">Trước khi là một Life Coach, tôi từng là dược sĩ — người dành cả đời chăm sóc sức khỏe cho người khác. Nhưng chính những biến cố của cuộc sống đã cho tôi nhận ra: tổn thương cảm xúc mới là điều khiến nhiều phụ nữ đánh mất hạnh phúc và chính mình.</p>
       </div>
 
-      <div class="credentials">
-        <h4>Bằng chứng & Chứng nhận</h4>
-        <div class="credentials-grid">
-          <div class="credential-item"><span class="dot"></span>Hơn 40 năm kinh nghiệm trong lĩnh vực chăm sóc con người</div>
-          <div class="credential-item"><span class="dot"></span>Dược sĩ, Đại học Dược Hà Nội</div>
-          <div class="credential-item"><span class="dot"></span>Chuyên gia Life Coach</div>
-          <div class="credential-item"><span class="dot"></span>Chứng nhận NLP Practitioner</div>
-          <div class="credential-item"><span class="dot"></span>Chứng nhận Time Line Therapy™ Practitioner</div>
-          <div class="credential-item"><span class="dot"></span>Chứng nhận Hypnosis Practitioner</div>
-          <div class="credential-item"><span class="dot"></span>Chứng nhận Ho'oponopono</div>
-          <div class="credential-item"><span class="dot"></span>Coach của GEIN Academy</div>
-          <div class="credential-item"><span class="dot"></span>Đã đồng hành coaching và tư vấn cho nhiều phụ nữ Việt Nam trong và ngoài nước</div>
+      <div class="story-block">
+        <span class="story-num">02</span>
+        <h3 class="story-title">Bước ngoặt — Điều gì đã khiến tôi thay đổi cuộc đời</h3>
+        <p class="story-text">Ở tuổi 60, Covid đã cướp đi người bạn đời thân yêu của tôi. Tôi một mình chăm lo gia đình, mẹ già và các con nơi xứ người, tại Ba Lan — những điều trước đây luôn có người đồng hành. Tôi đã trưởng thành và tái sinh sau khoảng thời gian ấy, học cách tin vào chính mình một lần nữa.</p>
+      </div>
+
+      <p class="pull-quote">Không có tuổi nào là muộn để bắt đầu lại.</p>
+
+      <div class="story-block">
+        <span class="story-num">03</span>
+        <h3 class="story-title">Vì sao tôi trở thành Life Coach</h3>
+        <p class="story-text">Tôi học tập miệt mài ở tuổi ngoài 60 để trở thành một chuyên gia Life Coach. Hành trình NLP, Time Line Therapy™, Hypnosis và Ho'oponopono đã giúp tôi chữa lành chính mình trước tiên — trước khi đồng hành cùng nhiều phụ nữ giống như mình vượt qua nghịch cảnh, tìm lại niềm vui và ý nghĩa cho cuộc sống.</p>
+      </div>
+
+      <div class="story-block story-block-last">
+        <span class="story-num">04</span>
+        <h3 class="story-title">Điều tôi tin</h3>
+        <p class="story-text">Tôi không đưa ra câu trả lời có sẵn. Công việc của tôi là đồng hành để bạn tự tìm thấy câu trả lời của riêng mình.</p>
+      </div>
+
+      <p class="pull-quote pull-quote-lg">&ldquo;Tôi không tin ai cần được sửa chữa. Tôi tin mỗi người đều có câu trả lời của riêng mình.&rdquo;</p>
+
+      <div class="authority">
+        <h4 class="authority-title">Bằng chứng &amp; Chứng nhận</h4>
+        <div class="authority-grid">
+          <div class="authority-group">
+            <div class="authority-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h5>Kinh nghiệm</h5>
+            <ul>
+              <li>Hơn 40 năm kinh nghiệm trong lĩnh vực chăm sóc con người</li>
+              <li>Dược sĩ, Đại học Dược Hà Nội</li>
+            </ul>
+          </div>
+          <div class="authority-group">
+            <div class="authority-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M8.5 13.5 7 21l5-2.5 5 2.5-1.5-7.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h5>Chứng chỉ</h5>
+            <ul>
+              <li>NLP Practitioner</li>
+              <li>Time Line Therapy™ Practitioner</li>
+              <li>Hypnosis Practitioner</li>
+              <li>Ho'oponopono</li>
+            </ul>
+          </div>
+          <div class="authority-group">
+            <div class="authority-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><path d="M12 3 2 8l10 5 10-5-10-5Z" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h5>Phương pháp</h5>
+            <ul>
+              <li>Chuyên gia Life Coach</li>
+              <li>Coach của GEIN Academy</li>
+            </ul>
+          </div>
+          <div class="authority-group">
+            <div class="authority-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><circle cx="9" cy="9" r="3.2"/><circle cx="17" cy="10" r="2.6"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke-linecap="round"/><path d="M14.8 14.3c2.4.2 4.2 2 4.2 4.7" stroke-linecap="round"/></svg></div>
+            <h5>Đồng hành cùng học viên</h5>
+            <ul>
+              <li>Đã đồng hành coaching và tư vấn cho nhiều phụ nữ Việt Nam trong và ngoài nước</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div style="margin-top: 32px;">
-        <a href="#dangky" class="btn btn-primary js-cta">Trò chuyện cùng Mai Anh</a>
+      <div class="about-cta">
+        <h4>Nếu câu chuyện của tôi cũng là điều bạn đang tìm kiếm&hellip;</h4>
+        <a href="#dangky" class="btn btn-primary js-cta">Đặt lịch tư vấn miễn phí 30 phút</a>
       </div>
     </div>
   </div>
