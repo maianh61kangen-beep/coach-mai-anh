@@ -139,7 +139,8 @@
   .hero-subnote{ font-size: 15px; color: var(--copper); margin-bottom: 36px; max-width: 500px; font-weight: 500; }
   .hero-cta-row{ display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 38px; }
 
-  .hero-trust{ display: flex; flex-wrap: wrap; gap: 16px 30px; }
+  .hero-trust{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+  @media (max-width: 480px){ .hero-trust{ grid-template-columns: 1fr; } }
   .hero-trust-item{ display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--text-muted); }
   .hero-trust-item strong{ color: var(--text-dark); font-weight: 600; }
   .hero-trust-item .ic{
@@ -163,7 +164,16 @@
     position: relative; z-index: 1;
   }
   .hero-photo{ position: relative; }
-  .hero-photo .photo-real{ max-width: 520px; margin: 0 auto; }
+  .hero-photo::before{
+    content: ""; position: absolute; inset: -40px -28px;
+    background: radial-gradient(ellipse at 50% 38%, rgba(201,168,106,0.22), transparent 68%);
+    filter: blur(30px); z-index: 0;
+  }
+  .hero-photo .photo-real{
+    aspect-ratio: 3/4; max-width: 480px; margin: 0 auto;
+    border-radius: 200px 200px 24px 24px;
+    border: 3px solid var(--gold);
+  }
 
   /* Pain section */
   .pain{ background: var(--ivory); }
@@ -437,7 +447,11 @@
       <div class="hero-trust">
         <div class="hero-trust-item">
           <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span><strong>40+ năm</strong> kinh nghiệm</span>
+          <span><strong>40 năm</strong> trong lĩnh vực chăm sóc sức khỏe cộng đồng</span>
+        </div>
+        <div class="hero-trust-item">
+          <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span>
+          <span><strong>Hơn 4 năm</strong> kinh nghiệm Life Coach</span>
         </div>
         <div class="hero-trust-item">
           <span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E6B5B" stroke-width="1.6"><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M8.5 13.5 7 21l5-2.5 5 2.5-1.5-7.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -454,7 +468,7 @@
       </div>
     </div>
     <div class="hero-photo reveal in">
-      <img class="photo-real" src="assets/brand/Profile.png" alt="Coach Mai Anh Trương">
+      <img class="photo-real" src="assets/brand/Profile-Hero.png" alt="Coach Mai Anh Trương">
     </div>
   </div>
 </section>
